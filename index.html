@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <style>
+        body{
+            font-family:Arial,sans-serif ;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+             background-color:  #FF9898;
+            padding: 200px;
+        }
+        form{
+            font-size: 24px;
+            background-color:#DD5B82 ;
+            padding: 20px;
+            border-radius:10px;
+            box-shadow:0 0 10px #9E579D;
+            max-width: 500px;
+            width:100%;
+            margin-top: 20px;
+            
+        }
+        h2{
+            text-align: center;
+            color: #51050F;
+            font-size:24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"],input[type="password"],input[type="email"],input[type="data"],select{
+            width: 100%;
+            padding: 10px;
+            margin:10px 0 ;
+            box-sizing: border-box;
+            border:1px solid #9E579D;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        input[type="submit"]{
+            background-color: #560764;
+            color:#5432D3;
+            padding: 24px;
+            border: none;
+            border-radius: 5px;
+            font-size:24px ;
+            margin-top: 20px;
+            width: 150px;
+            cursor: pointer;
+            transition: background-color0.3s,transform 0.3s;
+
+        }
+        
+        input[type="submit"]:hover{
+            background-color: #7B6CF6;
+        
+        }
+        input[type="submit"]:active{
+            transform: scale(0.98);
+        }
+        input[type="submit"]:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+      <form id="l1">
+        <h2>يرجي أدخال المعلومات لإنشاء حساب علي موقع الاكسسوارات النسائية </h2>
+        <label for="first name">ألاسم الاول</label>
+        <input type="text" id="first name" name="first name" placeholder="ألاسم الاول" required>
+        <label for="last name">الاسم الاخير</label>
+        <input type="text" id="last name"name="last name" placeholder="الاسم الاخير"required>
+        <label for="full name">الاسم كامل</label>
+        <input type="text" id="full name"name="full name"placeholder="الاسم كامل"required>
+        <label for="email">البريد الالكتروني</label>
+        <input type="email"id="email"name="email"placeholder="البريد الالكتروني"required>
+        <label for="country">الدولة</label>
+        <select id="country"name="country"required>
+            <option value="">اختر الدولة</option>
+            <option value="egypt">مصر</option>
+            <option value="saudi arabic">السعوديه</option>
+            <option value="syria">سوريا</option>
+            <option value="palestine">فلسطين</option>
+            <option value="morocco">المغرب</option>
+        </select>
+        <br><br>
+        <label for="birthdate">تاريخ الميلاد:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br><br>
+        <label for="gender">الجنس:</label>
+        <select id="gender" name="gender" required>
+            <option value="">اختر الجنس</option>
+            <option value="male">ذكر</option>
+            <option value="female">أنثى</option>
+        </select>
+        
+        <label for="password">كلمة المرور:</label>
+        <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+        
+        <input type="submit" value="Send">
+    </form>
+
+    <script>
+        
+        document.getElementById('l1').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const firstName = document.getElementById('first name').value;
+            const lastName = document.getElementById('last name').value;
+            const fullName = document.getElementById('full name').value;
+            const email = document.getElementById('email').value;
+            const country = document.getElementById('country').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const gender = document.getElementById('gender').value;
+            const password = document.getElementById('password').value;
+
+            
+            if (firstName && lastName && fullName && email && country &&  birthdate && gender && password) {
+                
+                window.location.href = 'typs.html'; 
+            } else {
+                alert('الرجاء إدخال جميع البيانات بشكل صحيح.');
+            }
+        });
+    </script>
+</body>
+</html>

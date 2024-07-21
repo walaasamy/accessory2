@@ -1,0 +1,266 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #FF9898;
+}
+
+
+header {
+    background-color: #F70776;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #680747;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: #680747;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: #141010;
+}
+
+
+section {
+    padding: 100px 20px;
+}
+
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #CF455C;
+}
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    justify-content: center;
+}
+
+.carousel-images img {
+    width: 33.33%;
+    height: auto;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #E02401;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1000;
+    font-size: 24px;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+
+.video-section {
+    margin-top: 20px;
+}
+
+.video-section h2 {
+    margin-bottom: 20px;
+}
+
+.video-section video {
+    max-width: 100%;
+    border: 2px solid #CF455C; 
+}
+
+
+.card-deck {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #FF9898;
+    width: 20em;
+    box-shadow: 0 5px 25px #AB6D23;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.advaic {
+    color: white;
+    text-align: center;
+}
+
+.advaic h1 {
+    margin-bottom: 20px;
+}
+#contact {
+    background-color: #CF455C;
+    padding: 20px;
+    text-align: center;
+}
+
+.contentn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.contact-card {
+    background-color: #FF9898;
+    width: 15em;
+    box-shadow: 0 5px 15px #AB6D23;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.icon {
+    color: #ee0b4f;
+    font-size: 2em;
+}
+#form-section {
+    background-color: #CF455C;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #F70776;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E02401;
+}
+
+footer {
+    background-color: #51050F;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer .l1 {
+    margin: 0;
+}
+
+.links a {
+    color: aliceblue;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.links a:hover {
+    color: #E02401;
+}
+@media (max-width: 992px) {
+    .navigation a {
+        padding-left: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+
+    .carousel-images img {
+        width: 100%;
+    }
+
+    .card-deck {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
